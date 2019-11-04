@@ -1,0 +1,8 @@
+/.classpath
+/.settings
+.project
+/getjob/META-INF
+/target
+/.springBeans
+/bin/
+**/node_modules
