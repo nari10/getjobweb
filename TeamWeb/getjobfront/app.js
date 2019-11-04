@@ -47,10 +47,9 @@ app.get('/offer', function(req, res){
     });
 });
 
-app.use('/_common', express.static('_common'));
-app.use('/_static/calendar', express.static('_static/calendar'));
+app.use('/calendar/static', express.static('calendar/static'));
 app.use('/it_introduction/static', express.static('it_introduction/static'));
-app.use('/_static/member', express.static('_static/member'));
+app.use('/member/static', express.static('member/static'));
 app.use('/offer/static', express.static('offer/static'));
 
 

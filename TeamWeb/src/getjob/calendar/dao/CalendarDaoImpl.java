@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -123,10 +124,14 @@ public class CalendarDaoImpl implements CalendarDao {
 	@Override
 	public int insertOfferSchedule(List<Integer> offers, String id) {
 		String sql = "insert into MEMBER_OFFER values(?,?)";
-		int result 
-			= offers.stream()
-				.mapToInt((offer)-> jdbcTemplate.update(sql, new Object[] { offer, id }))
-				.sum();
+		int result = 0;
+		try {
+			result = offers.stream()
+					.mapToInt((offer)-> jdbcTemplate.update(sql, new Object[] { offer, id }))
+					.sum();
+			} catch (DataAccessException e){
+				
+			}
 		return result;
 	}
 
