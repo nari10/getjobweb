@@ -1,9 +1,10 @@
-/* ÀÚ°Ý½ÃÇè */
+/* ìžê²©ì‹œí—˜ */
 CREATE TABLE TEST (
-	cert_name VARCHAR2(100) NOT NULL, /* ÀÌ¸§ */
-	begin_date DATE NOT NULL, /* ½ÃÀÛÀÏ */
-	end_date DATE NOT NULL, /* ¸¶°¨ÀÏ */
-	section VARCHAR2(100) NOT NULL /* ±¸ºÐ */
+	cert_name VARCHAR2(100) NOT NULL, /* ì´ë¦„ */
+	begin_date DATE NOT NULL, /* ì‹œìž‘ì¼ */
+	end_date DATE NOT NULL, /* ë§ˆê°ì¼ */
+	section VARCHAR2(100) NOT NULL, /* êµ¬ë¶„ */
+	codeno VARCHAR2(100) NOT NULL
 );
 
 CREATE UNIQUE INDEX PK_TEST
@@ -26,14 +27,14 @@ ALTER TABLE TEST
 		ENABLE
 		VALIDATE;
 
-/* È¸¿ø */
+/* íšŒì› */
 CREATE TABLE MEMBER (
-	id VARCHAR2(100) NOT NULL, /* ¾ÆÀÌµð */
-	password VARCHAR2(100) NOT NULL, /* ºñ¹Ð¹øÈ£ */
-	name VARCHAR2(100) NOT NULL, /* ÀÌ¸§ */
-	type VARCHAR2(100) NOT NULL, /* À¯Çü */
-	auth VARCHAR2(100) NOT NULL, /* µî±Þ */
-	certificate VARCHAR2(1000) /* ÀÚ°ÝÁõ */
+	id VARCHAR2(100) NOT NULL, /* ì•„ì´ë”” */
+	password VARCHAR2(100) NOT NULL, /* ë¹„ë°€ë²ˆí˜¸ */
+	name VARCHAR2(100) NOT NULL, /* ì´ë¦„ */
+	type VARCHAR2(100) NOT NULL, /* ìœ í˜• */
+	auth VARCHAR2(100) NOT NULL, /* ë“±ê¸‰ */
+	certificate VARCHAR2(1000) /* ìžê²©ì¦ */
 );
 
 CREATE UNIQUE INDEX PK_MEMBER
@@ -52,10 +53,10 @@ ALTER TABLE MEMBER
 		ENABLE
 		VALIDATE;
 
-/* ±â¼ú */
+/* ê¸°ìˆ  */
 CREATE TABLE SKILL (
-	name VARCHAR2(100) NOT NULL, /* ±â¼úÀÌ¸§ */
-	descript LONG NOT NULL /* ¼³¸í */
+	name VARCHAR2(100) NOT NULL, /* ê¸°ìˆ ì´ë¦„ */
+	descript LONG NOT NULL /* ì„¤ëª… */
 );
 
 CREATE UNIQUE INDEX PK_SKILL
@@ -74,10 +75,10 @@ ALTER TABLE SKILL
 		ENABLE
 		VALIDATE;
 
-/* È¸¿øº¸À¯±â¼ú */
+/* íšŒì›ë³´ìœ ê¸°ìˆ  */
 CREATE TABLE MEMBER_SKILL (
-	id VARCHAR2(100) NOT NULL, /* ¾ÆÀÌµð */
-	name VARCHAR2(100) NOT NULL /* ±â¼úÀÌ¸§ */
+	id VARCHAR2(100) NOT NULL, /* ì•„ì´ë”” */
+	name VARCHAR2(100) NOT NULL /* ê¸°ìˆ ì´ë¦„ */
 );
 
 CREATE UNIQUE INDEX PK_MEMBER_SKILL
@@ -98,10 +99,10 @@ ALTER TABLE MEMBER_SKILL
 		ENABLE
 		VALIDATE;
 
-/* Á÷¹« */
+/* ì§ë¬´ */
 CREATE TABLE JOB (
-	name VARCHAR2(100) NOT NULL, /* Á÷¹«ÀÌ¸§ */
-	descript LONG NOT NULL /* ¼³¸í */
+	name VARCHAR2(100) NOT NULL, /* ì§ë¬´ì´ë¦„ */
+	descript LONG NOT NULL /* ì„¤ëª… */
 );
 
 CREATE UNIQUE INDEX PK_JOB
@@ -120,15 +121,15 @@ ALTER TABLE JOB
 		ENABLE
 		VALIDATE;
 
-/* Ã¤¿ë°ø°í */
+/* ì±„ìš©ê³µê³  */
 CREATE TABLE OFFER (
-	no NUMBER NOT NULL, /* °Ô½Ã¹°¹øÈ£ */
-	begin_date DATE NOT NULL, /* ½ÃÀÛÀÏ */
-	end_date DATE NOT NULL, /* ¸¶°¨ÀÏ */
-	title VARCHAR2(100) NOT NULL, /* Á¦¸ñ */
-	content LONG NOT NULL, /* ³»¿ë */
-	ci_img VARCHAR2(100) NOT NULL, /* ÀÌ¹ÌÁö */
-	corporate_id VARCHAR2(100) /* ¾ÆÀÌµð(±â¾÷È¸¿ø) */
+	no NUMBER NOT NULL, /* ê²Œì‹œë¬¼ë²ˆí˜¸ */
+	begin_date DATE NOT NULL, /* ì‹œìž‘ì¼ */
+	end_date DATE NOT NULL, /* ë§ˆê°ì¼ */
+	title VARCHAR2(100) NOT NULL, /* ì œëª© */
+	content LONG NOT NULL, /* ë‚´ìš© */
+	ci_img VARCHAR2(100) NOT NULL, /* ì´ë¯¸ì§€ */
+	corporate_id VARCHAR2(100) /* ì•„ì´ë””(ê¸°ì—…íšŒì›) */
 );
 
 CREATE UNIQUE INDEX PK_OFFER
@@ -147,10 +148,10 @@ ALTER TABLE OFFER
 		ENABLE
 		VALIDATE;
 
-/* È¸¿ø¼±ÅÃÁ÷¹« */
+/* íšŒì›ì„ íƒì§ë¬´ */
 CREATE TABLE MEMBER_JOB (
-	name VARCHAR2(100) NOT NULL, /* Á÷¹«ÀÌ¸§ */
-	id VARCHAR2(100) NOT NULL /* ¾ÆÀÌµð */
+	name VARCHAR2(100) NOT NULL, /* ì§ë¬´ì´ë¦„ */
+	id VARCHAR2(100) NOT NULL /* ì•„ì´ë”” */
 );
 
 CREATE UNIQUE INDEX PK_MEMBER_JOB
@@ -171,11 +172,11 @@ ALTER TABLE MEMBER_JOB
 		ENABLE
 		VALIDATE;
 
-/* È¸¿øº°-ÃßÃµ°ø°í */
+/* íšŒì›ë³„-ì¶”ì²œê³µê³  */
 CREATE TABLE MEMBER_RECOM_OFFER (
-	offer_no NUMBER NOT NULL, /* °Ô½Ã¹°¹øÈ£ */
-	id VARCHAR2(100) NOT NULL, /* ¾ÆÀÌµð */
-	type VARCHAR2(100) NOT NULL /* ÃßÃµÀ¯Çü */
+	offer_no NUMBER NOT NULL, /* ê²Œì‹œë¬¼ë²ˆí˜¸ */
+	id VARCHAR2(100) NOT NULL, /* ì•„ì´ë”” */
+	type VARCHAR2(100) NOT NULL /* ì¶”ì²œìœ í˜• */
 );
 
 CREATE UNIQUE INDEX PK_MEMBER_RECOM_OFFER
@@ -196,12 +197,12 @@ ALTER TABLE MEMBER_RECOM_OFFER
 		ENABLE
 		VALIDATE;
 
-/* Ã¤¿ë°ø°í-¿ä±¸»çÇ× */
+/* ì±„ìš©ê³µê³ -ìš”êµ¬ì‚¬í•­ */
 CREATE TABLE OFFER_SPECS (
-	offer_no NUMBER NOT NULL, /* °Ô½Ã¹°¹øÈ£ */
-	job_name VARCHAR2(100) NOT NULL, /* Á÷¹«ÀÌ¸§ */
-	skill_name VARCHAR2(100) NOT NULL, /* ±â¼úÀÌ¸§ */
-	seq VARCHAR2(100) /* ¼ø¹ø */
+	offer_no NUMBER NOT NULL, /* ê²Œì‹œë¬¼ë²ˆí˜¸ */
+	job_name VARCHAR2(100) NOT NULL, /* ì§ë¬´ì´ë¦„ */
+	skill_name VARCHAR2(100) NOT NULL, /* ê¸°ìˆ ì´ë¦„ */
+	seq VARCHAR2(100) /* ìˆœë²ˆ */
 );
 
 CREATE UNIQUE INDEX PK_OFFER_SPECS
@@ -224,10 +225,10 @@ ALTER TABLE OFFER_SPECS
 		ENABLE
 		VALIDATE;
 
-/* È¸¿øº°-Ã¤¿ë°ø°í */
+/* íšŒì›ë³„-ì±„ìš©ê³µê³  */
 CREATE TABLE MEMBER_OFFER (
-	offer_no NUMBER NOT NULL, /* °Ô½Ã¹°¹øÈ£ */
-	id VARCHAR2(100) NOT NULL /* ¾ÆÀÌµð */
+	offer_no NUMBER NOT NULL, /* ê²Œì‹œë¬¼ë²ˆí˜¸ */
+	id VARCHAR2(100) NOT NULL /* ì•„ì´ë”” */
 );
 
 CREATE UNIQUE INDEX PK_MEMBER_OFFER
@@ -248,12 +249,12 @@ ALTER TABLE MEMBER_OFFER
 		ENABLE
 		VALIDATE;
 
-/* È¸¿øº°-ÀÚ°Ý½ÃÇèÀÏÁ¤ */
+/* íšŒì›ë³„-ìžê²©ì‹œí—˜ì¼ì • */
 CREATE TABLE MEMBER_TEST (
-	id VARCHAR2(100) NOT NULL, /* ¾ÆÀÌµð */
-	cert_name VARCHAR2(100) NOT NULL, /* ÀÌ¸§ */
-	begin_date DATE NOT NULL, /* ½ÃÀÛÀÏ */
-	end_date DATE NOT NULL /* ¸¶°¨ÀÏ */
+	id VARCHAR2(100) NOT NULL, /* ì•„ì´ë”” */
+	cert_name VARCHAR2(100) NOT NULL, /* ì´ë¦„ */
+	begin_date DATE NOT NULL, /* ì‹œìž‘ì¼ */
+	end_date DATE NOT NULL /* ë§ˆê°ì¼ */
 );
 
 CREATE UNIQUE INDEX PK_MEMBER_TEST
@@ -278,12 +279,12 @@ ALTER TABLE MEMBER_TEST
 		ENABLE
 		VALIDATE;
 
-/* Á÷¹«¸¶ÀÏ½ºÅæ */
+/* ì§ë¬´ë§ˆì¼ìŠ¤í†¤ */
 CREATE TABLE JOB_MILESTONE (
-	name VARCHAR2(100) NOT NULL, /* ¸¶ÀÏ½ºÅæÀÌ¸§ */
-	job_name VARCHAR2(100) NOT NULL, /* Á÷¹«ÀÌ¸§ */
-	seq NUMBER NOT NULL, /* ¼ø¹ø */
-	descript LONG NOT NULL /* ¼³¸í */
+	name VARCHAR2(100) NOT NULL, /* ë§ˆì¼ìŠ¤í†¤ì´ë¦„ */
+	job_name VARCHAR2(100) NOT NULL, /* ì§ë¬´ì´ë¦„ */
+	seq NUMBER NOT NULL, /* ìˆœë²ˆ */
+	descript LONG NOT NULL /* ì„¤ëª… */
 );
 
 CREATE UNIQUE INDEX PK_JOB_MILESTONE
@@ -304,10 +305,10 @@ ALTER TABLE JOB_MILESTONE
 		ENABLE
 		VALIDATE;
 
-/* Á÷¹«±â¼ú */
+/* ì§ë¬´ê¸°ìˆ  */
 CREATE TABLE JOB_SKILL (
-	job_name VARCHAR2(100) NOT NULL, /* Á÷¹«ÀÌ¸§ */
-	skill_name VARCHAR2(100) NOT NULL /* ±â¼úÀÌ¸§ */
+	job_name VARCHAR2(100) NOT NULL, /* ì§ë¬´ì´ë¦„ */
+	skill_name VARCHAR2(100) NOT NULL /* ê¸°ìˆ ì´ë¦„ */
 );
 
 CREATE UNIQUE INDEX PK_JOB_SKILL
@@ -328,11 +329,11 @@ ALTER TABLE JOB_SKILL
 		ENABLE
 		VALIDATE;
 
-/* °øÅëÄÚµå */
+/* ê³µí†µì½”ë“œ */
 CREATE TABLE CODE (
-	attribute VARCHAR2(100) NOT NULL, /* ¼Ó¼º¸í */
-	codeno NUMBER NOT NULL, /* ÄÚµå¹øÈ£ */
-	codename VARCHAR2(100) NOT NULL /* ÄÚµå¸í */
+	attribute VARCHAR2(100) NOT NULL, /* ì†ì„±ëª… */
+	codeno NUMBER NOT NULL, /* ì½”ë“œë²ˆí˜¸ */
+	codename VARCHAR2(100) NOT NULL /* ì½”ë“œëª… */
 );
 
 CREATE UNIQUE INDEX PK_CODE

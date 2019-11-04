@@ -24,6 +24,27 @@ insert into test values('정보처리기사','2019-06-29','2019-06-29','필기',
 insert into test values('정보처리기사','2019-11-15','2019-11-15','필기',101);
 insert into test values('정보처리기사','2019-10-12','2019-10-12','필기',101);
 
+insert into test values('정보보안기사','2019-02-03','2019-02-03','필기',102);
+insert into test values('정보보안기사','2019-03-13','2019-03-13','필기',102);
+insert into test values('정보보안기사','2019-04-27','2019-04-27','필기',102);
+insert into test values('정보보안기사','2019-07-29','2019-07-29','필기',102);
+insert into test values('정보보안기사','2019-11-15','2019-11-15','필기',102);
+insert into test values('정보보안기사','2019-10-12','2019-10-12','필기',102);
+
+insert into test values('컴퓨터활용능력1급','2019-03-13','2019-03-13','필기',103);
+insert into test values('컴퓨터활용능력1급','2019-04-12','2019-04-12','필기',103);
+insert into test values('컴퓨터활용능력1급','2019-04-22','2019-04-22','필기',103);
+insert into test values('컴퓨터활용능력1급','2019-06-24','2019-06-24','필기',103);
+insert into test values('컴퓨터활용능력1급','2019-11-16','2019-11-16','필기',103);
+insert into test values('컴퓨터활용능력1급','2019-10-17','2019-10-17','필기',103);
+
+insert into test values('컴퓨터활용능력2급','2019-03-03','2019-03-03','필기',104);
+insert into test values('컴퓨터활용능력2급','2019-04-13','2019-04-13','필기',104);
+insert into test values('컴퓨터활용능력2급','2019-04-27','2019-04-27','필기',104);
+insert into test values('컴퓨터활용능력2급','2019-06-29','2019-06-29','필기',104);
+insert into test values('컴퓨터활용능력2급','2019-11-15','2019-11-15','필기',104);
+insert into test values('컴퓨터활용능력2급','2019-10-12','2019-10-12','필기',104);
+
 -- [일반회원] --
 insert into member values('kim@naver.com', 'aaaaa', 'kim', 'member' , '프로필미작성', null);
 insert into member values('choi@naver.com', 'bbbbb', 'choi', 'member' , '프로필미작성', null);
@@ -118,4 +139,3 @@ insert into member_offer values(102,'choi@naver.com');
 insert into member_offer values(103,'choi@naver.com');
 insert into member_offer values(104,'choi@naver.com');
 commit;
-

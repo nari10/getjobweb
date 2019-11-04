@@ -1,5 +1,6 @@
 package getjob.calendar.biz;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,4 +65,5 @@ public class CalendarBiz {
 	public int add_offer_schedule(List<Integer> offers, String id) {
 		return calendarDao.insertOfferSchedule(offers, id);
 	} //회원별-공고 추가
+	
 }

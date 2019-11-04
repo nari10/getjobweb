@@ -1,9 +1,11 @@
 package getjob.calendar.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,6 +16,7 @@ import common.dto.Offer;
 import common.dto.Test;
 import getjob.calendar.biz.CalendarBiz;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @Controller
 public class CalendarController {
 	@Autowired
@@ -43,8 +46,11 @@ public class CalendarController {
 	@RequestMapping(value="addoffer.job")
 	@ResponseBody
 	public int addMemberOffer(@RequestParam("offerno") int offers, @RequestParam("id") String id) {
-//		int res = biz.Add_Member_Offer(offers, id);
-//		return res;
-		return 0;
+		int res = biz.add_offer_schedule(new ArrayList<Integer>(){
+			{
+				add(offers);
+			}
+		}, id);
+		return res;
 	}
 }
