@@ -12,15 +12,8 @@ app.get('/', function(req, res){
     });
 });
 
-app.get('/login', function(req, res){
-    fs.readFile('login/index.html', function(error, data){
-        res.writeHead(200, {'Content-Type' : 'text/html'});
-        res.end(data);
-    });
-});
-
-app.get('/member', function(req, res){
-    fs.readFile('member/index.html', function(error, data){
+app.get('/member/mypage/', function(req, res){
+    fs.readFile('member/mypage/index.html', function(error, data){
         res.writeHead(200, {'Content-Type' : 'text/html'});
         res.end(data);
     });

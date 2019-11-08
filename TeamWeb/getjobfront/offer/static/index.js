@@ -64,8 +64,47 @@ $('#offers').ready(function () {
     });
 });
 
+function addLabelAndInput(parent, name, varname, hidden){
+    var label = document.createElement("label");
+    label.innerHTML = name;
+    var input = document.createElement("input");
+    var br = document.createElement("br");
+    parent.append(label);
+    if (hidden == "true"){
+        label.setAttribute("hidden", "true");
+        input.setAttribute("hidden", "true");
+    } 
+    if (varname == "corporate"){
+        input.value = "SAMSUNG";
+        var readonly = document.createAttribute("readonly");
+        input.setAttribute("id", "read-only");
+    }
+    if (varname == "no"){
+        input.value = 105;
+    }
+    if (varname == "begin_date"){
+        input.value = new Date().format("yyyy-MM-dd");
+    }
+    if (varname == "end_date"){
+        input.value = new Date().format("yyyy-MM-dd");
+    }
+    parent.append(input);
+    parent.append(br);
+}
+
 $('#new-offer').ready(function () {
     $('#new-offer').on("click", function (e) {
+        $('#offer-table').children().remove();
+        addLabelAndInput($('#offer-table'), '번호', 'no');
+        addLabelAndInput($('#offer-table'), '시작일', 'begin_date');
+        addLabelAndInput($('#offer-table'), '마감일', 'end_date');
+        addLabelAndInput($('#offer-table'), '제목', 'title');
+        addLabelAndInput($('#offer-table'), '내용', 'content');
+        addLabelAndInput($('#offer-table'), '기업', 'corporate');
+        addLabelAndInput($('#offer-table'), '기업명', 'corporate_id', "true");
+        var button = document.createElement("button");
+        button.innerHTML = "확인";
+        $('#offer-table').append(button);
     })
 });
 

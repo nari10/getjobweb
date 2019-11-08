@@ -12,22 +12,6 @@ public class LoginDaoImpl implements LoginDao {
 	@Autowired
 	private SqlSessionTemplate session;
 
-	public void dao() {
-//		String RESOURCE = "getjob/login/mybatis-config.xml";
-//		String ID = "choi@naver.com";
-//		SqlSessionFactory factory = null;
-//		SqlSession session = null;
-//		try {
-//			InputStream config = Resources.getResourceAsStream(RESOURCE);
-//			factory = new SqlSessionFactoryBuilder().build(config);
-//			session = factory.openSession();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		String FIND_ID = session.selectOne("LoginMapper.selectMemberForIdCheck", ID);
-//		System.out.println(FIND_ID);
-	}
-
 	@Override
 	public Member selectMemberWithId(Member member) {
 		Member result = session.selectOne("LoginMapper.selectMemberForIdCheck", member);

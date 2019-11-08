@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import common.dto.Offer;
-import common.model.JobWithSkills;
 import common.model.OfferDetail;
 import getjob.offer.biz.OfferBiz;
 
@@ -39,6 +38,28 @@ public class OfferController {
 	}
 	
 	//작성하기
+//	@RequestMapping(value = "addOffer.job")
+//	public ModelAndView addOffer() {
+//		return new ModelAndView() {
+//			{
+//				setViewName("/_VIEW/offer/new.jsp");
+//				addObject("corporate_name", "SAMSUNG");
+//			}
+//		};
+//	}
+
+//	@RequestMapping(value = "addNewOffer.job")
+//	public String addNewOffer() {
+//		Offer offer = new Offer();
+//		offer.setNo();
+//		offer.setBegin_date();
+//		offer.setEnd_date();
+//		offer.setTitle();
+//		offer.setCi_img();
+//		offer.setCorporate_id();
+//		return "redirect:http://localhost:3000/offer";
+//	}
+
 	//변경저장
 	//삭제
 
