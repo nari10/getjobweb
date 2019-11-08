@@ -15,7 +15,7 @@ public interface MemberDao {
 	public MemberInfo selectMemberInfo(String string);
 	public List<String> selectMemberJobs(String id);
 
-	public int updateMemberInfo(MemberInfo memberInfo);
+//	public int updateMemberInfo(MemberInfo memberInfo);
 	public int updateMember(Member member);
 	public int deleteMember(String id);
 	

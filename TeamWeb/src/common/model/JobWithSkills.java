@@ -19,6 +19,7 @@ public class JobWithSkills {
 		this.jobName = jobName;
 	}
 
+
 	public void addSkill(String skill) {
 		skills.add(skill);
 	}

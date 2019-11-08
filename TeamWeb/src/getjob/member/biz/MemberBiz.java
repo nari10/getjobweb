@@ -47,8 +47,25 @@ public class MemberBiz {
 	} // 회원 정보 보기
 
 	public int update_member_info(MemberInfo memberInfo) {
-		int result = memberDao.updateMemberInfo(memberInfo);
-		return result;
+//		int result = memberDao.updateMemberInfo(memberInfo);
+		Member member = memberInfo.getMember();
+		int result1 = memberDao.updateMember(member);
+
+		List<String> jobs = memberInfo.getJobs();
+		int result2 = memberDao.deleteMemberJobs(member.getId());
+		int limit1 = jobs.size();
+		for (int i = 0; i < limit1; i++) {
+			memberInfo.addJob(jobs.get(i));
+		}
+
+		List<String> skills = memberInfo.getSkills();
+		int limit2 = skills.size();
+		int result3 = memberDao.deleteMemberSkills(member.getId());
+		for (int i = 0; i < limit2; i++) {
+			memberInfo.addSkill(skills.get(i));
+		}
+
+		return result1 + result2 + result3;
 	} // 회원 정보 변경
 
 }

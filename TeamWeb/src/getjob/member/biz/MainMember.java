@@ -97,6 +97,6 @@ public class MainMember {
 		skills.add("c++");
 		memberInfo.setSkills(skills);
 
-		dao.updateMemberInfo(memberInfo); // 회원정보 변경(비밀번호 변경)
+//		dao.updateMemberInfo(memberInfo); // 회원정보 변경(비밀번호 변경)
 	}
 }

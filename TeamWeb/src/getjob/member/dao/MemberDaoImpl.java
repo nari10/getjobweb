@@ -42,7 +42,7 @@ public class MemberDaoImpl implements MemberDao {
 		return members;
 	}
 
-	// È¸¿ø °¡ÀÔ
+	// È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@Override
 	public int insertMember(Member member) {
 		String sql = "insert into member values (?, ?, ?, ?, ?, ?)";
@@ -57,7 +57,7 @@ public class MemberDaoImpl implements MemberDao {
 		return result;
 	}
 
-	// È¸¿ø Á¤º¸ º¸±â
+	// È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	@Override
 	public Member selectMember(String id) {
 		String sql = "select * from member where id = ?";
@@ -79,25 +79,25 @@ public class MemberDaoImpl implements MemberDao {
 		return member;
 	}
 
-	// È¸¿ø Á¤º¸ ¼öÁ¤
-	@Override
-	public int updateMemberInfo(MemberInfo memberInfo) {
-		Member member = memberInfo.getMember();
-		updateMember(member);
+	// È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//	@Override
+//	public int updateMemberInfo(MemberInfo memberInfo) {
+//		Member member = memberInfo.getMember();
+//		updateMember(member);
 		
-		List<String> jobs = memberInfo.getJobs();
-		deleteMemberJobs(member.getId());
-		int limit1 = jobs.size();
-		for (int i = 0; i < limit1; i++) {
-			memberInfo.addJob(jobs.get(i));
-		}
+//		List<String> jobs = memberInfo.getJobs();
+//		deleteMemberJobs(member.getId());
+//		int limit1 = jobs.size();
+//		for (int i = 0; i < limit1; i++) {
+//			memberInfo.addJob(jobs.get(i));
+//		}
 		
-		List<String> skills = memberInfo.getSkills();
-		int limit2 = skills.size();
-		deleteMemberSkills(member.getId());
-		for (int i = 0; i < limit2; i++) {
-			memberInfo.addSkill(skills.get(i));
-		}
+//		List<String> skills = memberInfo.getSkills();
+//		int limit2 = skills.size();
+//		deleteMemberSkills(member.getId());
+//		for (int i = 0; i < limit2; i++) {
+//			memberInfo.addSkill(skills.get(i));
+//		}
 		
 //		ArrayList<Integer> intArr = new ArrayList<Integer>() {
 //			{
@@ -107,8 +107,8 @@ public class MemberDaoImpl implements MemberDao {
 //			}
 //		};
 //		return intArr.stream().mapToInt(i->i).sum();
-		return 0;
-	}
+//		return 0;
+//	}
 
 	@Override
 	public int deleteMember(String id) {
