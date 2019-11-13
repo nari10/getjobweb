@@ -23,10 +23,10 @@
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="it_introduction.job">It 소개</a></li>
-					<li><a href="offer.job">채용공고</a></li>
-					<li><a href="calendar.job">캘린더</a></li>
-					<li><a href="login.job">로그인/회원가입</a></li>
+					<li><a href="it_introduction">It 소개</a></li>
+					<li><a href="offer">채용공고</a></li>
+					<li><a href="calendar">캘린더</a></li>
+					<li><a href="login">로그인/회원가입</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->

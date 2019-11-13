@@ -1,23 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<!--     <script src="/calendar/static/index.js"></script>
- -->
+<script src="index.js"></script>
 <title>Document</title>
 <script src="/calendar/static/index.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
-
 <body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Get job</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="it_introduction.job">It 소개</a></li>
+					<li><a href="offer.job">채용공고</a></li>
+					<li><a href="calendar.job">캘린더</a></li>
+					<li><a href="login.job">로그인/회원가입</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
 	<!-- 헤더 -->
 	<div id="header" style="height: 60px; align-content: center;">
 		<h2>캘린더 홈</h2>
 	</div>
-
 	<!-- 바디 -->
 	<!-- 자격증 목록 띄우는 곳 -->
 	<div id="certificate"
@@ -45,5 +68,4 @@
 		<div id="cal_tab" class="cal" style="width: 500px;"></div>
 	</div>
 </body>
-
 </html>

@@ -18,7 +18,7 @@ public class MemberController {
 	@Autowired
 	private MemberBiz memberBiz;
 
-	@RequestMapping(value = "member.job")
+	@RequestMapping(value = "memberjob.job")
 	@ResponseBody
 	public ModelAndView member() {
 		List<Member> members = memberBiz.get_all_member_list();

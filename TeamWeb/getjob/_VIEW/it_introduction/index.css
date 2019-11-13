@@ -1,0 +1,16 @@
+aside {
+    float: left;
+    display: inline;
+}
+
+#job_descript {
+    float: left;
+   display: inline; 
+   clear: right;
+   overflow: hidden;
+}
+
+#skill_descript{
+    float: left;
+   display: inline; 
+}

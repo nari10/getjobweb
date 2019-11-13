@@ -4,9 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<script src="index.js"></script>
+<!-- 	<link rel="stylesheet" type="text/css" href="index.css">
+ -->
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -32,16 +39,15 @@
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
-	<div id="login" style="margin:300px">
-		<form action="/loginRequested.job" method="GET">
-			<label for="id">아이디</label><input type="text" name="id"
-				value="kim@naver.com" /> <br /> <label for="password">패스워드</label><input
-				type="text" name="password" value="aaaaa" />
-			<button type="submit">로그인</button>
-		</form>
+	<div>
+		<aside>
+			<section id="job"></section>
+			<section id="skill"></section>
+		</aside>
 	</div>
 	<div>
-		<a href="/signupRequested.job">회원가입</a>
+		<div id="job_descript"></div>
+		<div id="skill_descript"></div>
 	</div>
 </body>
 </html>
