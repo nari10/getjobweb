@@ -26,13 +26,14 @@
 					<li><a href="it_introduction.job">It 소개</a></li>
 					<li><a href="offer.job">채용공고</a></li>
 					<li><a href="calendar.job">캘린더</a></li>
-					<li><a href="login.job">로그인/회원가입</a></li>
+<!-- 					<li><a href="member.job">마이페이지</a></li>
+ -->					<li><a href="signup.job">회원가입</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
-	<div id="login" style="margin:300px">
+	<div id="login" style="margin:200px 0px 0px 200px">
 		<form action="/loginRequested.job" method="GET">
 			<label for="id">아이디</label><input type="text" name="id"
 				value="kim@naver.com" /> <br /> <label for="password">패스워드</label><input
@@ -40,8 +41,6 @@
 			<button type="submit">로그인</button>
 		</form>
 	</div>
-	<div>
-		<a href="/signupRequested.job">회원가입</a>
-	</div>
+	<div> <a style="margin: 0px 0px 0px 200px" href="/signup.job">회원가입</a> </div>
 </body>
 </html>

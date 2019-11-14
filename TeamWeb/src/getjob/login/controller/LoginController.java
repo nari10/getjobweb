@@ -25,18 +25,18 @@ public class LoginController {
 		Member member = loginBiz.sign_in(memberParam);
 		boolean loginOk = (member != null) ? true : false;
 		if (loginOk) {
-			return "redirect:http://localhost:3000/";
+			return "/WEB-INF/member/index.jsp";
 		} else {
 			return "/"; 
 		}
 	}
 	
-	@RequestMapping(value = "signupRequested.job")
+	@RequestMapping(value = "signup.job")
 	public String signupRequested() {
-		return "/_VIEW/signup/index.jsp";
+		return "/WEB-INF/signup/index.jsp";
 	}
 	
-	@RequestMapping(value = "signup.job", method = RequestMethod.GET)
+	@RequestMapping(value = "signupSubmitted.job", method = RequestMethod.GET)
 	public String signup(Member memberParam) {
 		Member member = loginBiz.validate_id(memberParam);
 		boolean isDuplicate = (member != null) ? true : false;

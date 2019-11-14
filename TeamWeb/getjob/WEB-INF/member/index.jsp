@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="../../static/member/index.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -23,25 +27,16 @@
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="it_introduction">It 소개</a></li>
-					<li><a href="offer">채용공고</a></li>
-					<li><a href="calendar">캘린더</a></li>
-					<li><a href="login">로그인/회원가입</a></li>
-				</ul>
+					<li><a href="it_introduction.job">It 소개</a></li>
+					<li><a href="offer.job">채용공고</a></li>
+					<li><a href="calendar.job">캘린더</a></li>
+					<li><a href="member.job">마이페이지</a></li>
+<!-- 					<li><a href="signup.job">로그인/회원가입</a></li>
+ -->				</ul>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
-	<div id="login" style="margin:300px">
-		<form action="/loginRequested.job" method="GET">
-			<label for="id">아이디</label><input type="text" name="id"
-				value="kim@naver.com" /> <br /> <label for="password">패스워드</label><input
-				type="text" name="password" value="aaaaa" />
-			<button type="submit">로그인</button>
-		</form>
-	</div>
-	<div>
-		<a href="/signupRequested.job">회원가입</a>
-	</div>
+	<div style="margin: 100px 0px 0px 50px" id="memberInfo"></div>
 </body>
 </html>

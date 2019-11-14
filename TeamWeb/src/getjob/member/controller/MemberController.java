@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import common.dto.Member;
+import common.model.MemberInfo;
 import getjob.member.biz.MemberBiz;
 
 @CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8787"})
@@ -28,5 +29,12 @@ public class MemberController {
 				addObject("members", members);
 			}
 		};
+	}
+
+	@RequestMapping(value = "memberInfo.job")
+	@ResponseBody
+	public MemberInfo memberInfo() {
+		MemberInfo member = memberBiz.get_member_info("kim@naver.com");
+		return member;
 	}
 }

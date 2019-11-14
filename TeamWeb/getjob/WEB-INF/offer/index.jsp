@@ -30,8 +30,9 @@
 					<li><a href="it_introduction.job">It 소개</a></li>
 					<li><a href="offer.job">채용공고</a></li>
 					<li><a href="calendar.job">캘린더</a></li>
-					<li><a href="login.job">로그인/회원가입</a></li>
-				</ul>
+					<li><a href="member.job">마이페이지</a></li>
+<!-- 					<li><a href="signup.job">로그인/회원가입</a></li>
+ -->				</ul>
 			</div>
 			<!--/.nav-collapse -->
 		</div>
