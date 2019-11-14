@@ -14,7 +14,7 @@ import common.dto.Offer;
 import common.model.OfferDetail;
 import getjob.offer.biz.OfferBiz;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8787"})
 @Controller
 public class OfferController {
 	

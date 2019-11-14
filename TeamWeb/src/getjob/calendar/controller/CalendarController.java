@@ -16,7 +16,7 @@ import common.dto.Offer;
 import common.dto.Test;
 import getjob.calendar.biz.CalendarBiz;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8787"})
 @Controller
 public class CalendarController {
 	@Autowired

@@ -10,7 +10,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<script src="./index.js"></script>
+<script src="../../static/offer/index.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -36,7 +36,7 @@
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
-	<div>
+	<div style="margin: 100px 0px 15px 50px;">
 		<table>
 			<thead>
 				<tr>
@@ -51,8 +51,8 @@
 			<tbody id="offers"></tbody>
 		</table>
 	</div>
-	<button id="new-offer">공고 작성하기</button>
-	<div>
+	<button style="margin: 0px 0px 0px 50px" id="new-offer">공고 작성하기</button>
+	<div style="margin: 50px">
 		<table id="offer-table">
 			<!-- <form action="">
 				<label for="no">번호</label><input type="text" name="no"><br>

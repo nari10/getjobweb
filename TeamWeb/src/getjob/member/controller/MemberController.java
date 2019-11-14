@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import common.dto.Member;
 import getjob.member.biz.MemberBiz;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8787"})
 @Controller
 public class MemberController {
 	@Autowired

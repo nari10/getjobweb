@@ -14,7 +14,7 @@ import common.dto.Milestone;
 import common.dto.Skill;
 import getjob.it_introduction.biz.ItBiz;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8787"})
 @Controller
 public class It_introductionController {
 

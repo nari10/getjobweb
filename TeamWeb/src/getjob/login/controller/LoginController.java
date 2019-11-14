@@ -10,7 +10,7 @@ import common.dto.Member;
 import getjob.login.biz.LoginBiz;
 import getjob.member.biz.MemberBiz;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8787"})
 @Controller
 public class LoginController {
 

@@ -10,8 +10,8 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="../../static/it_introduction/index.js"></script>
 </head>
-<script src="index.js"></script>
 <!-- 	<link rel="stylesheet" type="text/css" href="index.css">
  -->
 </head>
@@ -39,7 +39,7 @@
 			<!--/.nav-collapse -->
 		</div>
 	</nav>
-	<div>
+	<div style="margin: 100px">
 		<aside>
 			<section id="job"></section>
 			<section id="skill"></section>

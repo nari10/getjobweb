@@ -10,26 +10,26 @@ public class MainController {
 
 	@RequestMapping(value = "/")
 	public String login() {
-		return "/_VIEW/login/index.jsp";
+		return "WEB-INF/_VIEW/login/index.jsp";
 	}
 
 	@RequestMapping(value = "calendar.job")
 	public String calendar() {
-		return "/_VIEW/calendar/index.jsp";
+		return "WEB-INF/calendar/index.jsp";
 	}
 
 	@RequestMapping(value = "it_introduction.job")
 	public String it_introduction() {
-		return "/_VIEW/it_introduction/index.jsp";
+		return "WEB-INF/it_introduction/index.jsp";
 	}
 
 	@RequestMapping(value = "member.job")
 	public String member() {
-		return "/_VIEW/member/index.jsp";
+		return "WEB-INF/member/index.jsp";
 	}
 
 	@RequestMapping(value = "offer.job")
 	public String offer() {
-		return "/_VIEW/offer/index.jsp";
+		return "WEB-INF/offer/index.jsp";
 	}
 }
