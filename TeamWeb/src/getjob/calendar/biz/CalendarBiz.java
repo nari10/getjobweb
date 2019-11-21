@@ -46,7 +46,7 @@ public class CalendarBiz {
 		return calendarDao.deleteMemberTestSchedule(schedules);
 	} //회원별-자격증 삭제
 
-	public int add_member_certificate(List<TestSchedule> schedules) {
+	public int add_member_certificate(TestSchedule schedules) {
 		return calendarDao.insertMemberTestSchedule(schedules);
 	} //회원별-자격증 추가 
 

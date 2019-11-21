@@ -91,8 +91,8 @@ public class MainCalendar {
 		schedule2.setEnd_date(new Date("2019/06/29"));
 		schedules.add(schedule2);
 
-		int result = dao.insertMemberTestSchedule(schedules);
-		System.out.println(result+"개 자격증일정 추가 완료");
+		//int result = dao.insertMemberTestSchedule(schedules);
+		//System.out.println(result+"개 자격증일정 추가 완료");
 	}
 
 

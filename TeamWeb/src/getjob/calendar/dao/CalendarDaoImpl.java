@@ -66,15 +66,17 @@ public class CalendarDaoImpl implements CalendarDao {
 
 	// 회원별-자격증 추가
 	@Override
-	public int insertMemberTestSchedule(List<TestSchedule> schedules) {
+	public int insertMemberTestSchedule(TestSchedule schedules) {
 		String sql = "insert into MEMBER_TEST values(?,?,?,?)";
-		int res = schedules.stream().mapToInt((schedule)->jdbcTemplate.update(sql, new Object[] { 
-				schedule.getId(), 
-				schedule.getCert_name(), 
-				schedule.getBegin_date(), 
-				schedule.getEnd_date()
-				})).sum();
-		return res;
+			try {
+				int res = jdbcTemplate.update(sql, new Object[] {schedules.getId(), 
+						schedules.getCert_name(), 
+						schedules.getBegin_date(), 
+						schedules.getEnd_date()});
+				return res;
+			}catch(DataAccessException e) {
+				return 0;
+			}
 	}
 
 	// 회원별-자격시험 일정 보기

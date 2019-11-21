@@ -13,7 +13,7 @@ public interface CalendarDao {
 	public List<Test> selectAllTestSchedules(String cert_name); //자격증 확인
 	List<Test> selectTestSchedule(int codeno); //선택한 자격증 일정 확인
 
-	public int insertMemberTestSchedule(List<TestSchedule> schedules); // 나의 자격증 담기
+	public int insertMemberTestSchedule(TestSchedule schedules); // 나의 자격증 담기
 	public List<Test> selectAllMemberTestSchedules(String id); // 내 자격증 일정 월별 확인
 	public int deleteMemberTestSchedule(List<TestSchedule> schedules); // 나의 자격증 삭제
 	

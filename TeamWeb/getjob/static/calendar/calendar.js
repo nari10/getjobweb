@@ -1,47 +1,6 @@
 $().ready(function () {
     offer = [];
 
-    /* 자격증 리스트 받아와 띄우기 */
-    $.ajax({
-        url: 'http://localhost:8787/getcer.job',
-        type: "GET",
-        dataType: "json",
-        success: function (data) {
-            for (var i in data) {
-                var option = ("<option value=\"" + data[i].codeno + "\">" + data[i].codename + "</option>");
-                $('#certificate_list').append(option);
-            }
-        },
-        error: function (request, status, error) {
-            console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
-        }
-    });
-
-    //자격증 리스트에서 선택했을 때
-    $('#certificate_list').click(function () {
-        var codeno = $("#certificate_list option:selected").val();
-        var form = { "codeno": codeno };
-        $.ajax({
-            url: 'http://localhost:8787/gettestschedule.job?codeno=' + codeno,
-            type: "GET",
-            //data : JSON.stringify(form),
-            dataType: "json",
-            contentType: 'application/json',
-            success: function (data) {
-                var innert = "<p><b>" + data[0].cert_name + "의 시험일정은 </b></p><hr>";
-                for (var i in data) {
-                    var begin = getFormatDate(new Date(data[i].begin_date));
-                    var end = getFormatDate(new Date(data[i].end_date));
-                    innert += "<p style=\"height:15px;\">" + data[i].section + " : " + begin + " ~ " + end;
-                    $('#test_schedule').html(innert);
-                }
-            },
-            error: function (request, status, error) {
-                console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
-            }
-        });
-    });
-
     /* 공고 목록 받아오기 */
     $.ajax({
         url: 'http://localhost:8787/getoffer.job',
@@ -56,7 +15,6 @@ $().ready(function () {
                     + "." + end.getFullYear() + "." + (end.getMonth() + 1) + "." + end.getDate() + "." + data[i].no;
                 offer.push(offer_txt);
             }
-            console.log(offer);
         },
         error: function (request, status, error) {
             console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
@@ -101,14 +59,14 @@ function drawnewDays(offer) {
 function add_offer(offerno) {
     var id = "choi@naver.com"
     $.ajax({
-        url: 'http://localhost:8787/addoffer.job?offerno=' + offerno + "&id=" + id,
+        url: 'http://localhost:8787/addoffer.job?offerno='+offerno+"&id="+id,
         type: "GET",
         contentType: 'application/json',
         success: function (data) {
             if (data > 0) {
                 alert("해당 공고를 마이 공고에 추가하였습니다.");
             } else {
-                alert("해당 공고는 이미 마이 공고에 담겨있는 공고입니다.");
+                alert("해당 공고는 이미 마이 일정에 담겨있는 공고입니다.");
             }
         },
         error: function (request, status, error) {
@@ -117,14 +75,6 @@ function add_offer(offerno) {
     });
 }
 
-function getFormatDate(date) {
-    var year = date.getFullYear();		//yyyy
-    var month = (1 + date.getMonth());		//M
-    month = month >= 10 ? month : '0' + month;	//month 두자리로 저장
-    var day = date.getDate();			//d
-    day = day >= 10 ? day : '0' + day;		//day 두자리로 저장
-    return year + '' + month + '' + day;
-}
 
 //달력 띄우기
 //calendar 그리기

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("utf-8"); %>
+<% response.setContentType("text/html; charset=utf-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +10,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <title>Document</title>
-<script src="../../static/calendar/index.js"></script>
+<script src="../../static/calendar/calendar.js"></script>
+<script src="../../static/calendar/certificate.js"></script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 </head>
@@ -56,6 +59,10 @@
 	<!-- 클릭된 자격증 시험일정 띄우는 곳 -->
 	<div id="test_schedule"
 		style="width: 250px; height: 280px; background-color: #E0E0F8; margin-left: 130px; margin-top: 320px; position: absolute;">
+		<p id="test_title" style="font-weight: bold;" >자격증 목록을 클릭해주세요</p><hr>
+		<div id="test_schedule_list"
+		   style="width: 250px; height: 250px; background-color: #E0E0F8; position: absolute;">
+		</div>
 	</div>
 	<div id="calendar"
 		style="margin-left: 400px; width: 500px; height: 600px;">
