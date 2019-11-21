@@ -147,11 +147,23 @@ function handler(e) {
             var e = document.createElement("td");
             e.innerHTML = data.offer.corporate_id;
             tr.append(e);
+            var button = document.createElement("button");
+            button.innerHTML = "변경하기";
+            button.setAttribute("id", "update")
+            button.addEventListener("click", requestPage)
+            target.parent().append(button);
+            
             target.append(tr);
         }
     }); 
     promise.then(go);
 }
+
+function requestPage(event){
+//	console.log(event)
+	window.location.href = 'http://localhost:8787/offer_update.job?offer_no=101'
+}
+
 
 function go () {
     $("#offer-table").each(function () {

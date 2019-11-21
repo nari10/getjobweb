@@ -1,5 +1,6 @@
 package getjob.offer.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,13 @@ public class OfferController {
 		return detail;
 	}
 	
+	// 채용공고 변경
+	@RequestMapping(value="offerUpdate.job", method = RequestMethod.POST)
+	public String offerUpdate(@RequestParam HashMap<String, String> offer) {
+		System.out.println(offer);
+		return "offer.job";
+	}
+
 	//작성하기
 //	@RequestMapping(value = "addOffer.job")
 //	public ModelAndView addOffer() {

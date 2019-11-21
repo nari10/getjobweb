@@ -53,7 +53,6 @@
 		</table>
 	</div>
 	<button style="margin: 0px 0px 0px 50px" id="new-offer">공고 작성하기</button>
-
 	<div style="margin: 50px">
 		<table id="offer-table">
 			<!-- <form action="">

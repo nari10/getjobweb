@@ -50,5 +50,7 @@
 		<div id="job_descript"></div>
 		<div id="skill_descript"></div>
 	</div>
+	<button onclick="window.location.href = 'http://localhost:8787/it_update.job?jobname=frontend'">변경하기</button>
+	<button onclick="window.location.href = 'http://localhost:8787/it_new.job'">새 직무</button>
 </body>
 </html>

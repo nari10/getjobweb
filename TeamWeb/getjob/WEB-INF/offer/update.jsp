@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="common.model.OfferDetail, common.dto.Offer" %>
+<% 
+	OfferDetail detail = (OfferDetail) request.getAttribute("OfferDetail");
+	Offer offer = detail.getOffer();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,19 +58,20 @@
 		</table>
 	</div>
 	<button style="margin: 0px 0px 0px 50px" id="new-offer">공고 작성하기</button>
-
 	<div style="margin: 50px">
 		<table id="offer-table">
-			<!-- <form action="">
-				<label for="no">번호</label><input type="text" name="no"><br>
-				<label for="begin_date">시작일</label><input type="text" name="begin_date"><br>
-				<label for="end_date">마감일</label><input type="text" name="end_date"><br>
-				<label for="title">제목</label><input type="text" name="title"><br>
-				<label for="content">내용</label><input type="text" name="content"><br>
+			<form action="offerUpdate.job" name="offer" method="post">
+				<label for="no">번호</label><input type="text" value="<%=offer.getNo()%>" name="no"><br>
+				<label for="begin_date">시작일</label><input type="text" value="<%=offer.getBegin_date()%>" name="begin_date"><br>
+				<label for="end_date">마감일</label><input type="text" value="<%=offer.getEnd_date()%>" name="end_date"><br>
+				<label for="title">제목</label><input type="text" value="<%=offer.getTitle()%>" name="title"><br>
+				<label for="content">내용</label><input type="text" value="<%=offer.getContent()%>" name="content"><br>
 				<label for="corporate">기업</label><input type="text" value="SAMSUNG" name="corporate" readonly><br>
-				<label for="corporate_id" hidden="true">기업명</label>
-					<input type="text" value="196-86-00512" hidden="true" name="corporate_id"><br>
-			</form> -->
+<!-- 				<label for="corporate_id" hidden="true">기업명</label>
+				<input type="text" value="196-86-00512" hidden="true" name="corporate_id"><br>
+ -->				
+ 				<input type="submit" />
+			</form>
 		</table>
 	</div>
 </body>
