@@ -59,9 +59,10 @@ function handler(e) {
     var end_date = restxt[2];
     
     $.ajax({
-        url: 'http://localhost:8787/addcertificate.job?id='+id+"&cert_name="+cert_name+
-        "&begin_date="+begin_date+"&end_date="+end_date,
-        type: "GET",
+        url: "http://localhost:8787/addcertificate.job",
+        type: "POST",
+        data: {"id":id,"cert_name":cert_name,
+            "begin_date":begin_date,"end_date":end_date},
         datatype: "application/json",
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',  
         success: function (data) {

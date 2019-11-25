@@ -59,9 +59,10 @@ function drawnewDays(offer) {
 function add_offer(offerno) {
     var id = "choi@naver.com"
     $.ajax({
-        url: 'http://localhost:8787/addoffer.job?offerno='+offerno+"&id="+id,
-        type: "GET",
-        contentType: 'application/json',
+        url: "http://localhost:8787/addoffer.job",
+        type: "POST",
+        data : {"offerno":offerno,"id":id},
+        datatype: 'application/json',
         success: function (data) {
             if (data > 0) {
                 alert("해당 공고를 마이 공고에 추가하였습니다.");

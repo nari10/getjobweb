@@ -1,16 +1,103 @@
-aside {
-    float: left;
-    display: inline;
+body {
+	padding-top: 20px;
+	padding-bottom: 60px;
 }
 
-#job_descript {
-    float: left;
-   display: inline; 
-   clear: right;
-   overflow: hidden;
+.span555{
+	/* 한 줄 자르기 */ 
+	display: inline-block; 
+	width: 200px; 
+	white-space: nowrap; 
+	overflow: hidden; 
+	text-overflow: ellipsis;
+	
+	/* 여러 줄 자르기 추가 스타일 */ 
+	/*  white-space: normal; 
+	line-height: 1.2; 
+	height: 3.6em; 
+	text-align: left; 
+	word-wrap: break-word; 
+	display: -webkit-box; 
+	-webkit-line-clamp: 3; 
+	-webkit-box-orient: vertical; 
+ */
 }
 
-#skill_descript{
-    float: left;
-   display: inline; 
+/* 전체 내용을 감쌈 */
+.container-narrow{
+	position:absolute; top:50%; left:50%; 
+	margin:-300px 0 0 -450px;
+	max-width : 900px;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.container>hr {
+	margin: 60px 0;
+}
+
+/* 핵심 마케팅 문구와 가입 버튼 */
+.jumbotron {
+	margin: 20px 0;
+	text-align: center;
+	background-color: white;
+}
+
+.jumbotron .lead {
+	font-size: 24px;
+	margin-left : 100px;
+	width : 700px;
+	line-height: 1.25;
+}
+
+.jumbotron .btn {
+	font-size: 21px;
+	margin-top : 50px;
+	padding: 14px 24px;
+}
+
+/* 부수적인 마케팅 내용 */
+.marketing {
+	margin: 60px 0;
+}
+
+.marketing p+h4 {
+	margin-top: 28px;
+}
+
+/* 탐색막대 링크가 .navbar 공간을 모두 채우도록 변경 */
+.navbar .navbar-inner {
+	padding: 0;
+}
+
+.navbar .nav_bar {
+	margin: 0;
+	display: table;
+	width: 100%;
+}
+
+.navbar .nav_bar li {
+	display: table-cell;
+	width: 1%;
+	float: none;
+}
+
+.navbar .nav_bar li a {
+	font-weight: bold;
+	text-align: center;
+	border-left: 1px solid rgba(255, 255, 255, .75);
+	border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.navbar .nav_bar li:first-child a {
+	border-left: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.navbar .nav_bar li:last-child a {
+	border-right: 0;
+	border-radius: 0 3px 3px 0;
 }

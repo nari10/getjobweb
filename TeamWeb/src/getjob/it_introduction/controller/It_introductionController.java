@@ -43,6 +43,10 @@ public class It_introductionController {
 	@ResponseBody
 	public List<Skill> get_skill_list(@RequestParam String jobname) {
 		List<Skill> skills = itBiz.get_skill_list(jobname);
+		for(int i=0; i<skills.size(); i++) {
+			String de = itBiz.get_skill_content(skills.get(i).getName()).getDescript();
+			skills.get(i).setDescript(de);
+		}
 		return skills;
 	} //기술 목록 보기
 
@@ -52,6 +56,8 @@ public class It_introductionController {
 		Skill skill = itBiz.get_skill_content(skillname);
 		return skill;
 	} //기술 내용 보기
+	
+
 
 //	add_skill(dao); //기술 추가하기
 //	update_skill(dao); //기술 변경하기

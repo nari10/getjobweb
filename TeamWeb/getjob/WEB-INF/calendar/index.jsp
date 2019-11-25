@@ -64,15 +64,17 @@
 		   style="width: 250px; height: 250px; background-color: #E0E0F8; position: absolute;">
 		</div>
 	</div>
+	
+	<!-- 캘린더 -->
 	<div id="calendar"
 		style="margin-left: 400px; width: 500px; height: 600px;">
 		<div class="cal_top" style="width: 500px;">
-			<a href="#" id="movePrevMonth"><span id="prevMonth"
-				class="cal_tit">&lt;</span></a> <span id="cal_top_year"></span> <span
-				id="cal_top_month"></span> <a href="#" id="moveNextMonth"><span
-				id="nextMonth" class="cal_tit">&gt;</span></a>
+			<a href="#" id="movePrevMonth"><span id="prevMonth"class="cal_tit">&lt;</span></a> 
+			<span id="cal_top_year"></span> <span id="cal_top_month"></span> 
+			<a href="#" id="moveNextMonth"><span id="nextMonth" class="cal_tit">&gt;</span></a>
 		</div>
-		<div id="cal_tab" class="cal" style="width: 500px;"></div>
+		<div id="cal_tab" class="cal" style="width: 500px;">
+		</div>
 	</div>
 </body>
 </html>
